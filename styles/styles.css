@@ -1,5 +1,10 @@
 /* Загальні стилі */
-* {margin;:0}
+*,
+*::before,
+*::after {
+ margin: 0;
+ padding: 0;
+}
 
 :root {
 	--main-bg-color: #F5F5F5;
@@ -11,12 +16,25 @@
 	--order-button-bg-color: #188CE8;
 	--header-button-text-color: #212121;
 	--footer-link-color: #ffffff99;
+	--border-color: #EEEEEE;
+	--header-border-color: #ECECEC;
 }
 
 body {
 	font-family: "Roboto", sans-serif;
 	color: var(--main-text-color);
 }
+
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+  }
 
 .link {
 	text-decoration: none;
@@ -54,15 +72,22 @@ body {
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: var(--header-button-text-color);
+	padding-bottom: 50px;
 }
 
 /* Верхня лінія */
 
-.topline {
+.topline .container {
+	display:flex;
+	align-items: center;
 	background-color: var(--topline-bg-color);
-	display:flex
+	border: 1px solid;
+	border-color: var(--accent-text-color) var(--accent-text-color) var(--header-border-color) var(--accent-text-color);
 }
 
+.logo {
+	margin-right: 93px;
+}
 .header-logo {
 	font-family: "Raleway", sans-serif;
 	font-size: 26px;
@@ -73,19 +98,29 @@ body {
 
 .navigation {
 	display: flex;
+	align-items: center;
 	list-style: none;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
+	padding: 32px 0;
 	color: var(--header-button-text-color);
+}
+
+.nav-link {
+	margin-right: 50px;
 }
 
 .header-contacts {
 	display: flex;
+	align-items: center;
+	margin-left: auto;
+	
 }
 .header-phone,
 .header-mail {
+	margin-left: 50px;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
@@ -97,13 +132,12 @@ body {
 
 .footer {
 	background-color: var(--accent-bg-color);
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .down-logo {
-	outline: red;
-	background-color: #a9461c99;
-	margin-left: 215px;
-	padding-left: 100;
+	padding-bottom: 20px;
 }
 
 .footer-logo {
@@ -111,6 +145,7 @@ body {
 	font-size: 26px;
 	line-height: 1.2;
 	letter-spacing: 0.03em;
+	padding: 0;
 	color: var(--accent-text-color);
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -118,6 +153,10 @@ body {
 .address-list {
 	margin-left: 0px;
 	font-style: normal;
+}
+
+.address-list :not(:last-child) {
+	padding-bottom: 9px;
 }
 
 .map-link,
@@ -135,6 +174,7 @@ body {
 	color: var(--footer-link-color);
 }
 
+
 /* Студія */
 
 .hero {
@@ -149,13 +189,18 @@ body {
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	color: var(--accent-text-color);
+	padding-top: 106px;
+	padding-bottom: 40px;
 }
 
 .order-button {
 	font-family: inherit;
-	font-weight: 700
+	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.9;
+	display: flex;
+	align-items: center;
+	text-align: center;
 	letter-spacing: 0.06em;
 	border-radius: 4px;
 	border: none;
@@ -163,15 +208,23 @@ body {
 	color: var(--accent-text-color);
 	background-color: var(--accent-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	margin: 0 auto;
+	padding: 10px 32px;
+}
+
+.btn-down-padding {
+	padding-bottom: 106px;
 }
 
 .order-button:active,
 .order-button:focus,
 .order-button:hover {
-	
 	background-color: var(--order-button-bg-color);
 }
 
+.down-pad {
+	padding-bottom: 200px;
+}
 
 .visually-hidden {
 	position: fixed;
@@ -180,6 +233,7 @@ body {
 
 .features-list {
 	display: flex;
+	gap: 30px;
 }
 
 .features-list-header {
@@ -189,6 +243,7 @@ body {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	color: var(--secondary-text-color);
+	padding-bottom: 10px;
 }
 
 .features-list-text {
@@ -200,8 +255,11 @@ body {
 
 .activity-list {
 	display: flex;
+	gap: 30px;
 	list-style: none;
 }
+
+
 
 .team {
 	background-color: var(--main-bg-color);
@@ -209,7 +267,16 @@ body {
 
 .team-list {
 	display: flex;
+	gap: 30px;
+	flex-basis: 1400px;
 	list-style: none;
+}
+
+.team-item {
+background-color: var(--accent-text-color);
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+
 }
 
 .teammate-name {
@@ -219,14 +286,17 @@ body {
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: var(--header-button-text-color);
+	padding-top: 50px;
+	padding-bottom: 10px;
 }
 
-.teammate-positiom {
+.teammate-position {
 	font-size: 16px;
 	line-height: 1.19;
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: var(--main-text-color);
+	padding-bottom: 30px;
 }
 
 /* Портфоліо */
@@ -241,7 +311,6 @@ gap: 8px
 	background-color: var(--main-bg-color);
 	border: none;
 	padding: 6px 22px;
-	margin-top: 94px;
 	margin-bottom: 50px;
 	color: var(--header-button-text-color);
 	border-radius: 4px;
@@ -279,8 +348,13 @@ gap: 8px
 }
 
 .portfolio-card {
-	
+	background-color: var(--accent-text-color);
 }
+
+/* .portfolio-description {
+	border: 1px solid;
+	border-color: var(--accent-text-color) var(--border-color) var(--border-color) var(--border-color);
+} */
 
 .portfolio-item {
 	font-size: 18px;
