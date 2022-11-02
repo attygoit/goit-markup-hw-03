@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="./styles/styles.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +15,10 @@
 	</head>
 	<body>
 <!-- Верхня лінія -->
-<header class="topline">
-    <div class="container">
-    <a href="./index.html" class="logo link">
-        <span class="accent-logo">Web</span>
-        <span class="header-logo">Studio</span>
-    </a>
+<header class="header">
+    <div class=" topline container">
+        <a href="./index.html" class="link"><span class=logo>Web<span class="top-logo">Studio</span></span>
+        </a>
     <nav>
         <ul class="navigation list">
             <li><a href="./index.html" class="nav-link link">Студія</a></li>
@@ -40,7 +38,7 @@
 			<section class="section">
                 <div class="container">
                     <!-- Заголовок прихований -->
-                                    <h1 class="visually-hidden">Портфоліо</h1>
+                    <h1 class="visually-hidden">Портфоліо</h1>
                                 <!-- Фільтр -->
                     <ul class=" button-list list">
                         <li ><button class="button">Усі</button></li>
@@ -50,89 +48,89 @@
                         <li ><button class="button">Маркетинг</button></li>
                     </ul>
                                 <!-- Картки проектів -->
-                                <ul class="cards-list list">
-                    <li class="portfolio-card">
-                        <a href="#" class="link">
-                            <img src="./img/projects/pr-1.jpeg" alt="сайт технокряк на екрані макбуку" width="370" height="294">
-                            <div class="portfolio-description">
-                                <h2 class="portfolio-item">Технокряк</h2>
-                                <p class="portfolio-item-type">Веб-сайт</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="link">
-                            <div class="portfolio-description">
-                                <img src="./img/projects/pr-2.jpeg" alt="постер дуель баскетболістів" width="370" height="294">
+                    <ul class="cards-list list">
+                        <li class="portfolio-card">
+                            <a href="#" class="link">
+                                <img class="portfolio-img" src="./img/projects/pr-1.jpeg" alt="сайт технокряк на екрані макбуку" width="370" height="294">
+                                <div class="portfolio-description">
+                                    <h2 class="portfolio-item">Технокряк</h2>
+                                    <p class="portfolio-item-type">Веб-сайт</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <img class="portfolio-img" src="./img/projects/pr-2.jpeg" alt="постер дуель баскетболістів" width="370" height="294">
+                                <div class="portfolio-description">
                                 <h2 class="portfolio-item">Постер New Orlean vs Golden Star</h2>
                                 <p class="portfolio-item-type">Дизайн</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="link">
-                            <div class="portfolio-description">
-                                <img src="./img/projects/pr-3.jpeg" alt="логотип ресторану" width="370" height="294">
-                                <h2 class="portfolio-item">Ресторан Seafood</h2>
-                                <p class="portfolio-item-type">Додаток</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="link">
-                            <div class="portfolio-description">
-                                <img src="./img/projects/pr-4.jpeg" alt="чорні моніторні навушники" width="370" height="294">
-                                <h2 class="portfolio-item">Проект Prime</h2>
-                                <p class="portfolio-item-type">Маркетинг</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="link">
-                            <div class="portfolio-description">
-                                <img src="./img/projects/pr-5.jpeg" alt="дві картонні коробки" width="370" height="294">
-                                <h2 class="portfolio-item">Проект Boxes</h2>
-                                <p class="portfolio-item-type">Додаток</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="link">
-                            <div class="portfolio-description">
-                                <img src="./img/projects/pr-6.jpeg" alt="веб-сайт на екрані аймака" width="370" height="294">
-                                <h2 class="portfolio-item">Inspiration has no Borders</h2>
-                                <p class="portfolio-item-type">Веб-сайт</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="link">
-                            <div class="portfolio-description">
-                                <img src="./img/projects/pr-7.jpeg" alt="розворот журналу" width="370" height="294">
-                                <h2 class="portfolio-item">Видання Limited Edition</h2>
-                                <p class="portfolio-item-type">Дизайн</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="link">
-                            <div class="portfolio-description">
-                                <img src="./img/projects/pr-8.jpeg" alt="дизайн ярлика з логотипом" width="370" height="294">
-                                <h2 class="portfolio-item">Проект LAB</h2>
-                                <p class="portfolio-item-type">Маркетинг</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="link">
-                            <div class="portfolio-description">
-                                <img src="./img/projects/pr-9.jpeg" alt="веб-сайт на еркані макбука" width="370" height="294">
-                                <h2 class="portfolio-item">Growing Bussines</h2>
-                                <p class="portfolio-item-type">Додаток</p>
-                            </div>
-                        </a>
-                    </li>
-                                </ul>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <img class="portfolio-img" src="./img/projects/pr-3.jpeg" alt="логотип ресторану" width="370" height="294">
+                                <div class="portfolio-description">
+                                    <h2 class="portfolio-item">Ресторан Seafood</h2>
+                                    <p class="portfolio-item-type">Додаток</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <img class="portfolio-img" src="./img/projects/pr-4.jpeg" alt="чорні моніторні навушники" width="370" height="294">
+                                <div class="portfolio-description">
+                                    <h2 class="portfolio-item">Проект Prime</h2>
+                                    <p class="portfolio-item-type">Маркетинг</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <img class="portfolio-img" src="./img/projects/pr-5.jpeg" alt="дві картонні коробки" width="370" height="294">
+                                <div class="portfolio-description">
+                                    <h2 class="portfolio-item">Проект Boxes</h2>
+                                    <p class="portfolio-item-type">Додаток</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <img class="portfolio-img" src="./img/projects/pr-6.jpeg" alt="веб-сайт на екрані аймака" width="370" height="294">
+                                <div class="portfolio-description">
+                                    <h2 class="portfolio-item">Inspiration has no Borders</h2>
+                                    <p class="portfolio-item-type">Веб-сайт</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <img class="portfolio-img" src="./img/projects/pr-7.jpeg" alt="розворот журналу" width="370" height="294">
+                                <div class="portfolio-description">
+                                    <h2 class="portfolio-item">Видання Limited Edition</h2>
+                                    <p class="portfolio-item-type">Дизайн</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <img class="portfolio-img" src="./img/projects/pr-8.jpeg" alt="дизайн ярлика з логотипом" width="370" height="294">
+                                <div class="portfolio-description">
+                                    <h2 class="portfolio-item">Проект LAB</h2>
+                                    <p class="portfolio-item-type">Маркетинг</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="link">
+                                <img class="portfolio-img" src="./img/projects/pr-9.jpeg" alt="веб-сайт на еркані макбука" width="370" height="294">
+                                <div class="portfolio-description">
+                                    <h2 class="portfolio-item">Growing Bussines</h2>
+                                    <p class="portfolio-item-type">Додаток</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 			</section>
 		</main>
@@ -141,10 +139,7 @@
 		<footer class="footer">
 			<div class="container">
 				<a href="./index.html" class="link">
-					<div class="down-logo">
-						<span class="accent-logo">Web</span>
-						<span class="footer-logo">Studio</span>
-					</div>
+					<span class="logo">Web<span class="bottom-logo">Studio</span></span>
 				</a>
 				<address>
 					<ul class="address-list list">
